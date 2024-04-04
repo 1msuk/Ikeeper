@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    float previous_temperature = -999.0; 
+    float temperature; 
+
+    while (1) {
+        scanf("%f", &temperature); 
+        if (temperature == 999) 
+            break;
+
+        if (previous_temperature != -999.0) { 
+            float temperature_change = temperature - previous_temperature;
+            printf("%.2f\n", temperature_change); 
+        }
+        previous_temperature = temperature; 
+    }
+
+    return 0;
+}
+
+//양심선언하겠습니다 구글링 사용한겁니다
